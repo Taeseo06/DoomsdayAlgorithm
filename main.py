@@ -1,6 +1,6 @@
 # 이 파일은 콘웨이의 둠스데이 알고리즘을 파이썬으로 구현한 소스코드입니다.
 import sys
-y, m, d = map(int, sys.stdin.readline().rstrip().split())
+y, m, d = map(int, sys.stdin.readline().rstrip().split()) # 입력 포멧 : (년도 4자리) (월 2자리) (일 2자리)
 
 dic = {'1': 0, '2': 0, '3': 21, '4': 4, '5': 9, '6': 6, '7': 11, '8': 8, '10': 10, '11': 7, '9': 5, '12': 12 }
 dic2 = {1: "월요일", 2: "화요일", 3: "수요일", 4: "목요일", 5: "금요일", 6: "토요일", 7: "일요일", 0: "일요일"}
@@ -25,3 +25,4 @@ same_d = dic.get(str(m))
 Day = d - same_d
 
 print(f'{y}년 {m}월 {d}일은 {dic2.get((dooms + Day) % 7)} 입니다.')
+
